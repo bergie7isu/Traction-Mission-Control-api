@@ -2,6 +2,7 @@ TRUNCATE todos, issues, team RESTART IDENTITY CASCADE;
 
 INSERT INTO issues (issue, who, created, status, status_date, reviewed)
 VALUES
+  ('Good to see you again', 'Mark Bergstrom', '2019-01-03', null, null, 'no'),
   ('First issue', 'Mark Bergstrom', '2019-01-03', null, null, 'no'),
   ('Second issue', 'Paul Johnson', '2019-02-03', null, null, 'no'),
   ('Third issue', 'Joel Tjepkes', '2019-03-03', null, null, 'no'),
@@ -16,6 +17,7 @@ VALUES
 
 INSERT INTO todos (todo, who, created, due, status, status_date, reviewed, issue)
 VALUES
+  ('Hi there Mark', 'Mark Bergstrom', '2019-01-03', '2019-01-10', null, null, 'no', 1),
   ('First to-do', 'Mark Bergstrom', '2019-01-03', '2019-01-10', null, null, 'no', 1),
   ('Second to-do', 'Paul Johnson', '2019-02-03', '2019-02-10', null, null, 'no', 2),
   ('Third to-do', 'Joel Tjepkes', '2019-03-03', '2019-03-10', null, null, 'no', 3),
