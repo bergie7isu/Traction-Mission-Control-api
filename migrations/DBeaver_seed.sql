@@ -39,6 +39,6 @@ VALUES
   ('Joel Tjepkes'),
   ('Nathan Witt');
   
-INSERT INTO weeks (endOfWeek, currentWeek)
+INSERT INTO weeks (end_of_week, current_week)
 VALUES
   (6, '2020-03-14');

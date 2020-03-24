@@ -6,8 +6,8 @@ const jsonParser = express.json()
 
 const serializeWeek = week => ({
     id: week.id,
-    endOfWeek: week.endOfWeek,
-    currentWeek: week.currentWeek
+    endOfWeek: week.end_of_week,
+    currentWeek: week.current_week
 });
 
 weeksRouter
