@@ -9,6 +9,7 @@ const serializeWeek = week => ({
     id: week.id,
     endOfWeek: xss(week.endOfWeek),
     currentWeek: xss(week.currentWeek),
+    farts: 'turds'
 });
 
 weeksRouter
