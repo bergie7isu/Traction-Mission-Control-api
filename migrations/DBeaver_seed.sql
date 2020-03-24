@@ -42,3 +42,9 @@ VALUES
 INSERT INTO weeks (end_of_week, current_week)
 VALUES
   (6, '2020-03-14');
+  
+INSERT INTO metrics (sort, status, who, metric_name, metric_type, metric_format, decimals, created, archived, data)
+VALUES
+  (1, 'active', 'Mark Bergstrom', 'Metric Number 1', '>', 'dollars', 0, '2020-01-01', null, null),
+  (2, 'active', 'Mark Bergstrom', 'Metric Number 2', '>', 'number', 0, '2020-02-01', null, null),
+  (3, 'active', 'Mark Bergstrom', 'Metric Number 3', '>', 'percent', 0, '2020-03-01', null, null);
