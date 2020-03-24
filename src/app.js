@@ -7,6 +7,7 @@ const { NODE_ENV } = require('./config');
 const todosRouter = require('./todos/todos-router');
 const issuesRouter = require('./issues/issues-router');
 const weeksRouter = require('./weeks/weeks-router');
+const teamRouter = require('./team/team-router');
 
 const app = express();
 
@@ -21,6 +22,7 @@ app.use(cors());
 app.use('/api/todos', todosRouter);
 app.use('/api/issues', issuesRouter);
 app.use('/api/weeks', weeksRouter);
+app.use('/api/team', teamRouter);
 
 app.get('/', (req, res) => {
     res.send('Hello, world!');
