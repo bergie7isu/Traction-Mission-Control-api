@@ -1,5 +1,4 @@
 const express = require('express')
-const xss = require('xss')
 const WeeksService = require('./weeks-service')
 
 const weeksRouter = express.Router()
@@ -7,9 +6,8 @@ const jsonParser = express.json()
 
 const serializeWeek = week => ({
     id: week.id,
-    endOfWeek: xss(week.endOfWeek),
-    currentWeek: xss(week.currentWeek),
-    farts: 'turds'
+    endOfWeek: week.endOfWeek,
+    currentWeek: week.currentWeek
 });
 
 weeksRouter
