@@ -24,7 +24,7 @@ app.use('/api/todos', todosRouter);
 app.use('/api/issues', issuesRouter);
 app.use('/api/team', teamRouter);
 app.use('/api/weeks', weeksRouter);
-app.use('/api/metrics', teamRouter);
+app.use('/api/metrics', metricsRouter);
 
 app.get('/', (req, res) => {
     res.send('Hello, world!');
