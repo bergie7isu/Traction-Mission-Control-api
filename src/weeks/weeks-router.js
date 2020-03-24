@@ -54,6 +54,7 @@ weeksRouter
                 }
             })
         }
+        weekToUpdate.endOfWeek = 6;
         WeeksService.updateWeek(
             req.app.get('db'),
             req.params.week_id,
