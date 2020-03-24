@@ -45,6 +45,6 @@ VALUES
   
 INSERT INTO metrics (sort, status, who, metric_name, metric_type, metric_format, decimals, created, archived, data)
 VALUES
-  (1, 'active', 'Mark Bergstrom', 'Metric Number 1', '>', 'dollars', 0, '2020-01-01', null, null),
-  (2, 'active', 'Mark Bergstrom', 'Metric Number 2', '>', 'number', 0, '2020-02-01', null, null),
-  (3, 'active', 'Mark Bergstrom', 'Metric Number 3', '>', 'percent', 0, '2020-03-01', null, null);
+  (1, 'active', 'Mark Bergstrom', 'Metric Number 1', '>', 'dollars', 0, '2020-01-01', null, '[{"date": "2019-12-21", "plan": 10, "result": 11}, {"date": "2019-12-28", "plan": 20, "result": 21}, {"date": "2020-01-04", "plan": 30, "result": 31}]'),
+  (2, 'active', 'Mark Bergstrom', 'Metric Number 2', '>', 'number', 0, '2020-02-01', null, '[]'),
+  (3, 'active', 'Mark Bergstrom', 'Metric Number 3', '>', 'percent', 0, '2020-03-01', null, '[]');

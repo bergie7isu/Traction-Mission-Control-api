@@ -43,5 +43,5 @@ CREATE TABLE metrics (
     decimals INTEGER NOT NULL,
     created TEXT NOT NULL,
     archived TEXT,
-    data TEXT[]
+    data JSON NOT NULL
 );

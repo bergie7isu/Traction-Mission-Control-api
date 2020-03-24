@@ -1,6 +1,6 @@
 const path = require('path')
 const express = require('express')
-//const xss = require('xss')
+const xss = require('xss')
 const MetricsService = require('./metrics-service')
 
 const metricsRouter = express.Router()
@@ -11,7 +11,7 @@ const serializeMetric = metric => ({
     sort: metric.sort,
     status: metric.status,
     who: metric.who,
-    metric_name: metric.metric_name,
+    metric_name: xss(metric.metric_name),
     metric_type: metric.metric_type,
     metric_format: metric.metric_format,
     decimals: metric.decimals,
