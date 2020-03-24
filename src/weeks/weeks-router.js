@@ -44,8 +44,8 @@ weeksRouter
         res.json(serializeWeek(res.week))
     })
     .patch(jsonParser, (req, res, next) => {
-        const { endOfWeek, currentWeek } = req.body
-        const weekToUpdate = { endOfWeek, currentWeek };
+        const { end_of_week, current_week } = req.body
+        const weekToUpdate = { end_of_week, current_week };
         const numberOfValues = Object.values(weekToUpdate).filter(Boolean).length
         if (numberOfValues === 0) {
             return res.status(400).json({
@@ -54,7 +54,6 @@ weeksRouter
                 }
             })
         }
-        weekToUpdate.endOfWeek = 6;
         WeeksService.updateWeek(
             req.app.get('db'),
             req.params.week_id,
