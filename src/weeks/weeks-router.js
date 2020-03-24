@@ -40,6 +40,9 @@ weeksRouter
         })
         .catch(next)
     })
+    .get((req, res, next) => {
+        res.json(serializeWeek(res.week))
+    })
     .patch(jsonParser, (req, res, next) => {
         const { endOfWeek, currentWeek } = req.body
         const weekToUpdate = { endOfWeek, currentWeek };
