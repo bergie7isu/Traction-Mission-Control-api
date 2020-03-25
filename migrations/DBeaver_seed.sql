@@ -41,7 +41,7 @@ VALUES
   
 INSERT INTO weeks (end_of_week, current_week)
 VALUES
-  (6, '2020-03-14');
+  (6, '2020-03-28');
   
 INSERT INTO metrics (sort, status, who, metric_name, metric_type, metric_format, decimals, created, archived, data)
 VALUES
