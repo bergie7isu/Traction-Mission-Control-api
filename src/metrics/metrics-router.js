@@ -42,7 +42,7 @@ metricsRouter
             }
         }
         newMetric.archived = archived;
-        newMetric.data = data;
+        newMetric.data = JSON.stringify(data);
         MetricsService.insertMetric(
             req.app.get('db'),
             newMetric
