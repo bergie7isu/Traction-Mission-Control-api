@@ -99,7 +99,7 @@ metricsRouter
             })
         }
         metricToUpdate.created = created;
-        metricToUpdate.data = JSON.stringigy(data);
+        metricToUpdate.data = JSON.stringify(data);
         MetricsService.updateMetric(
             req.app.get('db'),
             req.params.metric_id,
