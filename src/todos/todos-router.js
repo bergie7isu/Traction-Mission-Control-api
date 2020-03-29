@@ -9,7 +9,7 @@ const jsonParser = express.json()
 const serializeTodo = todo => ({
     id: todo.id,
     todo: xss(todo.todo),
-    who: todo.who,
+    who: xss(todo.who),
     created: todo.created,
     due: todo.due,
     status: todo.status,
