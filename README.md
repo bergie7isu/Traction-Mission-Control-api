@@ -9,23 +9,6 @@ https://traction-mission-control-app.now.sh/
 ## Summary:
 The Traction Mission Control App is your go-to tool for driving accountability, follow-through, and consistent communication in your organization running on the EOS Platform.
 
-#### To-dos:
-Document action items in your L-10 Meetings and drive team accountability to complete tasks on-time, everytime. Link to-dos directly to the issues they solve, and track completion performance right in the app! When everyone gets their tasks done, the team wins!
-
-#### Issues:
-We've all got issues. Keeping track of them in your L-10 Meeting and solving them forever can be hard. Let Traction Mission Control help!
-
-#### Archive Filtering:
-Quickly view and filter archived to-dos and issues for yourself and your team. View historical performance data to drive accountability discussions.
-
-## Screenshots:
-![Screenshot of To-do List](/src/images/screenshots/todos-screenshot.JPG?raw=true "To-do List")
-![Screenshot of Issues List](/src/images/screenshots/issues-screenshot.JPG?raw=true "Issues List")
-![Screenshot of Archive](/src/images/screenshots/archive-screenshot.JPG?raw=true "Archive Filtering")
-
-## Technologies Used:
-React, CSS, Node, Express, PostgreSQL
-
 ## API Documentation:
 
 #### Todo Object Example
@@ -53,6 +36,43 @@ React, CSS, Node, Express, PostgreSQL
     "status": "Solved",
     "status_date": "2020-02-18",
     "reviewed": "no"
+},
+```
+
+#### Metric Object Example
+```javascript
+{
+    "id": 3,
+    "sort": 2,
+    "status": "active",
+    "who": "Charlie T. Jameson",
+    "metric_name": "Third metric",
+    "metric_type": ">",
+    "metric_format": "number"
+    "created": "2020-02-11",
+    "archived": "2020-02-11",
+    "data": [
+        {
+            "date": '2020-02-11',
+            "plan": 10,
+            "result": 11
+        },
+        {
+            "date": '2020-02-18',
+            "plan": 20,
+            "result": 19
+        },
+        {
+            "date": '2020-02-25',
+            "plan": 30,
+            "result": 31
+        },
+        {
+            "date": '2020-03-03',
+            "plan": 40,
+            "result": 40
+        }
+    ]
 },
 ```
 
@@ -99,3 +119,23 @@ React, CSS, Node, Express, PostgreSQL
 `GET` - id\
 `DELETE` - id\
 `PATCH` - one of: issue, who
+
+#### `/api/metrics`
+
+##### Methods:
+`GET` - returns a list of all metrics\
+`POST` - adds a new metric
+
+##### Required Parameters:
+`GET` - none\
+`POST` - sort, status, who, metric_name, metric_type, metric_format, decimals, created
+
+#### `/api/metrics/:id`
+
+##### Methods:
+`GET` - returns a specific metric\
+`PATCH` - updates a specific metric
+
+##### Required Parameters:
+`GET` - id\
+`PATCH` - one of: sort, status, who, metric_name, metric_type, metric_format, decimals, archived, data
